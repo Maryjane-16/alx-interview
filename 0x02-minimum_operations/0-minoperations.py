@@ -9,14 +9,15 @@ def minOperations(n):
     """
     returns an integer
     """
+
     operation_count = 0
-    operation_number = 2
-    if type(n) is not int and n <= 0:
+    allowed_operation = 2
+    if not isinstance(n, int) or n <= 1:
         return operation_count
     while n > 1:
-        if n % operation_number == 0:
-            operation_count += operation_number
-            n //= operation_number
+        if n % allowed_operation == 0:
+            operation_count += allowed_operation
+            n /= allowed_operation
         else:
-            operation_number += 1
+            allowed_operation += 1
     return operation_count
