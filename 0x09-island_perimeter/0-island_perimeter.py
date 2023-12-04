@@ -26,4 +26,3 @@ def island_perimeter(grid) -> int:
                 if j < col-1 and grid[i][j+1] == 1:
                     neighbor_land += 1
     return land*4-2*neighbor_land
-    
